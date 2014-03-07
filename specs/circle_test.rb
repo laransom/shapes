@@ -22,5 +22,4 @@ describe Circle do
     expect(circle.area).to be_within(tolerance).of(78.5397)
   end
 
-
 end
