@@ -3,10 +3,12 @@ require_relative '../lib/circle.rb'
 
 describe Circle do
   let(:circle) {Circle.new(5)}
+  let(:circle_one) {Circle.new(3.5)}
   let(:tolerance) {0.001}
 
   it 'has a valid radius' do
-    expect(circle.radius.class).to eq(Fixnum)
+    expect(circle_one.radius.class.ancestors.include? Numeric).to eq(true)
+    expect(circle.radius.class.ancestors.include? Numeric).to eq(true)
     expect(circle.radius).should > 0
   end
 
