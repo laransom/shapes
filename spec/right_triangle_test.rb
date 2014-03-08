@@ -6,7 +6,7 @@ describe RightTriangle do
   let(:tolerance) {0.001}
 
   it 'has a valid height' do
-    expect(right_triangle.class.ancestors.include? Numeric).to eq(true)
+    expect(right_triangle.height.class.ancestors.include? Numeric).to eq(true)
     expect(right_triangle.height).should > 0
   end
 
